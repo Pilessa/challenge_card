@@ -1,0 +1,157 @@
+:root {
+    --fuentePrincipal: 'Montserrat', sans-serif;
+    --fuenteSecundaria: 'Fraunces', serif;
+    --colorBase: hsl(30, 38%, 92%);
+    --colorSecundario: hsl(158, 36%, 37%);
+    --gris: hsl(228, 12%, 48%);
+    --gris-oscuro: hsl(212, 21%, 14%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color: var(--colorBase);
+    font-family: var(--fuentePrincipal);
+}
+
+.contenido{
+    background-color: #fff;
+    width: 375px;
+    border-radius: 1rem;
+    margin: auto;
+    padding-bottom: 0.7rem;
+}
+
+@media (min-width: 768px) {
+    .contenido{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 900px;
+        height: 470px;
+        padding-bottom: 0%;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 768px) {
+        .contenido-mobile{
+            display: flex;
+            flex-direction:column;
+            align-content: center;
+        }
+}
+
+.imagen-mobile {
+	height: 400px;
+	overflow: hidden;
+    
+
+}
+
+@media (min-width: 768px) {
+    .imagen-mobile{
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+#imagen-producto{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+
+h1{
+    font-family: var(--fuenteSecundaria);
+    line-height: 35px;
+    margin-top: 0.5rem;
+}
+
+h3{
+    font-size: 12px;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    color: var(--gris);
+    margin: 0%;
+}
+
+.precios{
+    display: flex;
+    align-items:center;
+    height:50px;
+}
+
+
+.precio-descuento{
+    font-family: var(--fuenteSecundaria );
+    font-size: 35px;
+    color: var(--colorSecundario);
+    margin-left: 1rem;
+}
+
+.precio-regular{
+    color: var(--gris);
+    font-size: 15px;
+    text-decoration:line-through;
+    margin-left: 2rem;
+}
+
+.informacion-producto{
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contenido-full{
+        position: relative;
+    }
+}
+
+@media (min-width: 768px) {
+    .informacion-producto,
+    .boton-comprar{  
+        margin: 3rem 2rem 0 2rem;
+    }
+    
+}
+
+.descripcion-producto{
+    font-size: 15px;
+    line-height: 28px;
+    color: var(--gris);
+    font-weight: lighter;
+}
+
+.boton{
+    display: flex;
+    justify-content:center;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--colorSecundario);
+    text-decoration: none;
+    margin:auto;
+    color: #fff;
+    width: 90%;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.boton-comprar{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.attribution{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 0.5rem;
+}
